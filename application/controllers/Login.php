@@ -19,4 +19,10 @@ class Login extends CI_Controller {
       redirect($_SERVER['HTTP_REFERER']);
     }
   }
+
+  public function logout()
+  {
+    $this->session->sess_destroy();
+    redirect();
+  }
 }

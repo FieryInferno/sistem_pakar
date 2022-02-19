@@ -27,4 +27,10 @@ class GejalaModel extends CI_Model {
   {
     $this->db->delete("gejala", ["id_gejala" => $id_gejala]);
   }
+
+  public function getGejalaName($id_gejala)
+  {
+    $data = $this->getById($id_gejala);
+    return $data["gejala"];
+  }
 }
